@@ -7,13 +7,14 @@ import java.time.LocalDate;
 
 import org.junit.jupiter.api.Test;
 
+import br.com.alura.tdd.modelo.Desempenho;
 import br.com.alura.tdd.modelo.Funcionario;
 
 public class ReajusteServiceTeste {
 
 	@Test
-	public void reajusteDeveriaSerTresPorCentoQuandoDesempenhoForADesejar() {
-		ReajusteService service = new ReajusteService;
+	public void reajusteDeveriaSerTresPorCentoQuandoDesempenhoForADesejar(){
+		ReajusteService service = new ReajusteService();
 		Funcionario funcionario = new Funcionario("ana", LocalDate.now(), new BigDecimal("1000.00"));
 		
 		service.concedeReajuste(funcionario, Desempenho.A_DESEJAR);
